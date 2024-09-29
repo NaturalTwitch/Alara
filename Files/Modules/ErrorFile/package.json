@@ -1,0 +1,16 @@
+{
+  "name": "file-error-log",
+  "version": "1.0.0",
+  "description": "Log an error to a errorlog.txt",
+  "main": "errorlog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Console.log()",
+    "to",
+    "File"
+  ],
+  "author": "NaturalTwitch",
+  "license": "ISC"
+}

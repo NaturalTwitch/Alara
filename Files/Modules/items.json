@@ -1,0 +1,61 @@
+{
+  "foodItem": [
+    {
+      "name": "Burger",
+      "multiplier": 1.5
+    },
+    {
+      "name": "HotDog",
+      "multiplier": 1.3
+    },
+    {
+      "name": "Fries",
+      "multiplier": 1.4
+    },
+    {
+      "name": "Pizza",
+      "multiplier": 1.4
+    },
+    {
+      "name": "Chips",
+      "multiplier": 1.1
+    },
+    {
+      "name": "Sandwich",
+      "multiplier": 1.3
+    },
+    {
+      "name": "Poutine",
+      "multiplier": 2
+    },
+    {
+      "name": "Pierogies",
+      "multiplier": 1.2
+    },
+    {
+      "name": "Popcorn",
+      "multiplier": 1.3
+    },
+    {
+      "name": "Taco",
+      "multiplier": 2
+    }
+  ],
+    "miscItems": [
+    {
+        "name": "Lucky Coin",
+        "id": "luckycoin",
+        "multiplier": 0
+    },
+    {
+        "name": "wallet Chain",
+        "id": "walletchain",
+        "multiplier": 0
+    },
+    {
+        "name": "Smurf's Coffee",
+        "id": "smurfscoffee",
+        "multiplier": 0
+    }
+  ]
+}
