@@ -13,7 +13,7 @@ module.exports = {
         const customPrefix = await getCustomPrefix(message, client);
         const { prefix } = client;
         if (customPrefix) {
-            if (!message.content.startsWith(customPrefix) || message.author.bot){
+            if (!message.content.startsWith(customPrefix) || message.author.bot) {
                 return;
             }
         } else if (!message.content.startsWith(prefix) || message.author.bot) return;
@@ -22,14 +22,16 @@ module.exports = {
         const args = message.content.slice(usedPrefix.length).split(/ +/);
         const cmd = args.shift().toLowerCase();
 
-        const command = client.commands.get(cmd) || client.commands.find((a) => a.aliases && a.aliases(cmd));
+        const command =
+            client.commands.get(cmd) ||
+            client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
 
         if (command) {
             command.execute(client, message, cmd, args, Discord)
         }
     },
     async messageHandler(message, client, args) {
-        
+
     }
 }
 
