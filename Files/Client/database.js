@@ -3,7 +3,7 @@ require('dotenv').config();
 const currentDate = new Date()
 const pool = new Pool({
   user: 'postgres',
-  host: 'localhost',
+  host: process.env.DATABASE_IP,
   database: 'Alara',
   password: process.env.DATABASE_PASS,
   port: 5432,
