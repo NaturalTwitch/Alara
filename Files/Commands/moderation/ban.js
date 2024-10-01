@@ -16,7 +16,7 @@ module.exports = {
         let modlog = await getCustomChannel(message, client);
         let channel = message.guild.channels.cache.find((x) => (x.id === `${modlog}`));
 
-        let banReason = `Kicked by ${message.author.tag} for ${reason}`;
+        let banReason = `Banned by ${message.author.tag} for ${reason}`;
 
         const mentionEmbed = new Discord.EmbedBuilder()
             .setDescription(`Please remember to mention the user **(User Mention eg. <@643945264868098049>)**`)
