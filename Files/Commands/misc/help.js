@@ -33,7 +33,7 @@ module.exports = {
             const defaultEmbed = new Discord.EmbedBuilder()
                 .setColor(`#000000`)
                 .setTitle(`Alara Help Menu`)
-                .setDescription("[Support Server](https://discord.gg/dFBKKPB8Y3) | Prefix `.`")
+                .setDescription("[Support Server](https://discord.gg/3beHZ6c2HV) | Prefix `.`")
                 .addFields({
                     name: `**__How to use:__**`,
                     value: `To select your help category, use the drop-down menu. This embed will change to display the commands for that category.`,
@@ -68,7 +68,7 @@ module.exports = {
                 const categoryEmbed = new Discord.EmbedBuilder()
                     .setColor(`#000000`)
                     .setTitle(`${capitalizeFirstLetter(selectedCategory)} Commands`)
-                    .setDescription(`Here are the commands under the **${capitalizeFirstLetter(selectedCategory)}** category:`)
+                    .setDescription("[Support Server](https://discord.gg/dFBKKPB8Y3) | Prefix `.`")
                     .addFields(
                         commandsInCategory.map(cmd => ({
                             name: capitalizeFirstLetter(cmd.name),
