@@ -2,7 +2,6 @@ const { description } = require("../reload");
 
 module.exports = {
     name: 'back',
-    aliases: [],
     description: "Returns to previously played song.",
     utilisation: '{prefix}back',
     howTo: `.back`,

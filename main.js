@@ -32,12 +32,28 @@ player.events.on('connectionError', (queue, error) => {
 });
 
 
-player.events.on('playerStart', (queue, track) => {
+player.events.on('playerStart', async (queue, track) => {
+  const id = queue.metadata.guildId;
+  const volume = await getVolume(id, client)
+  if (volume) {
+    queue.node.setVolume(Number(volume))
+  }
   const trackStart = new EmbedBuilder()
-    .setDescription(`🎵 Now Playing: **${track.title}**🎧`)
-    .setImage(`${track.thumbnail}`)
+    .setTitle(`🎧Alara's Jukebox🎧`)
+    .addFields(
+      {
+        name: `Now Playing:`,
+        value: `${track.title}`
+      },
+      {
+        name: `Current Volume:`,
+        value: `${volume}%`
+      }
+    )
+    .setThumbnail(`${track.thumbnail}`)
   if (!client.config.opt.loopMessage && queue.repeatMode !== 0) return;
   queue.metadata.channel.send({ embeds: [trackStart] });
+
 });
 
 player.events.on('audioTracksAdd', (queue, tracks) => {
@@ -79,3 +95,12 @@ process.on('unhandledRejection', (error) => {
 process.on('uncaughtException', (error) => {
   errorLog(error)
 });
+
+
+async function getVolume(id, client) {
+  const response = await client.db.query(`select volume_percentage from volume where guild_id = $1`, [
+    id,
+  ]);
+  if (response && response.rowCount) return response.rows[0].volume_percentage;
+  return null;
+}

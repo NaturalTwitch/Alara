@@ -2,7 +2,6 @@ const { description } = require("../reload");
 
 module.exports = {
     name: 'pause',
-    aliases: [],
     description: "pauses current music",
     howTo: ".pause",
     utilisation: '{prefix}pause',
