@@ -3,6 +3,7 @@ const { PermissionsBitField } = require("discord.js");
 module.exports = {
     name: "ban",
     description: "bans user from guild",
+    howTo: ".ban [user]",
     async execute(client, message, cmd, args, Discord) {
         const member = message.mentions.members.first();
         const user = message.mentions.users.first();

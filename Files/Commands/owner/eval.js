@@ -3,7 +3,8 @@ const Discord = require('discord.js')
 module.exports = {
   name: 'evaluate',
   aliases: ['eval'] ,
-  description: "Evaluate/Test Code to ensure its correct",
+  description: "Evaluate/Test Code to ensure its correct. \n !Only Works for Bot Owner!",
+  howTo: ".evaluate [javascriptCode]",
   async execute(client, message, cmd, args){
     const clean = async (text) => {
     // If our input is a promise, await it before continuing

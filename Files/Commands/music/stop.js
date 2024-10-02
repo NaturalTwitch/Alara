@@ -2,6 +2,7 @@ module.exports = {
     name: 'stop',
     aliases: ['st'],
     description: 'Stops music playback',
+    howTo: ".stop",
     utilisation: '{prefix}stop',
     voiceChannel: true,
 
